@@ -47,10 +47,11 @@ def detect_recognize(image_path, is_api=False):
     if is_api:
         fina_result = [[dt.tolist(), rec[0], rec[1]]
                        for dt, rec in zip(dt_boxes, rec_res)]
-        fina_reuslt_json = json.dumps(fina_result,
-                                      indent=2,
-                                      ensure_ascii=False)
-        return fina_reuslt_json
+       # fina_reuslt_json = json.dumps(fina_result,
+        #                              indent=2,
+         #                             ensure_ascii=False)
+        #return fina_reuslt_json
+        return fina_result
     else:
         return img_str, elapse, elapse_part, rec_res_data
 
